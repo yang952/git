@@ -1,1 +1,9 @@
-ÐÂ´´½¨readme.txt
+readme.txt
+
+ add 
+
+ insert
+
+ update
+
+ select
