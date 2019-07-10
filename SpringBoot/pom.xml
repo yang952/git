@@ -1,0 +1,94 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.imti.sb</groupId>
+  <artifactId>SpringBoot</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  	<parent>
+	      <groupId>org.springframework.boot</groupId>
+	      <artifactId>spring-boot-starter-parent</artifactId>
+	      <version>2.1.0.RELEASE</version>
+	</parent>
+	
+  	<dependencies>
+  		<!-- springboot 核心包 -->
+  		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <!-- springboot 核心包 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+  		<!-- springboot 核心包   web模块 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+		<!-- 访问HTML模板 -->
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+      
+        <!-- 测试类 -->
+        <dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		
+		<!-- spring-boot热部署 -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+		
+		<!-- jdbc链接容器 -->
+	    <dependency>
+	        <groupId>mysql</groupId>
+	        <artifactId>mysql-connector-java</artifactId>
+	        <version>5.1.34</version>
+	    </dependency>
+	    
+	    <!-- jpa（已包含hibernate） -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+  	</dependencies>
+  	
+    <build>
+		<plugins>
+			<plugin><!-- 指定编译插件 -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+  			<plugin>
+				<!-- 配置tomcat7插件 -->
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<port>8080</port>
+					<path>/</path>
+				</configuration>
+			</plugin>
+  		</plugins>
+	</build>
+</project>
