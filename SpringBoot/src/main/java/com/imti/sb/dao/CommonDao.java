@@ -15,5 +15,5 @@ import com.imti.sb.bean.BaseBean;
  */
 @Repository
 public interface CommonDao<T extends BaseBean> extends JpaRepository<T, Long> {
- 
+
 }
