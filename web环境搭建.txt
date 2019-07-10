@@ -1,0 +1,17 @@
+一、配置java开发环境：
+1、“高级系统设置”->“环境变量”:
+	a）新建"java_home",值：jdk安装根目录(例如：C:\Program Files\Java\jdk1.8.0_66);
+	b）找到path环境变量，修改：在最前面加上：%JAVA_HOME%\bin;原有的值;
+	c)新建“classpath”环境变量：.;%JAVA_HOME%\jre\lib\rt.jar;%JAVA_HOME%\lib\tools.jar
+
+2、安装web服务器（tomcat）：
+	1) 将安装文件解压到指定目录（不能包括中文字符及特殊字符）即可；
+	2) 找到安装根目录/bin目录：双击startup.bat文件，启动服务器；
+	3）观察服务器启动过程是否出现错误，解决相应错误；
+	4）最常见错误：端口已被绑定。解决方案：打开安装根目录/conf目录/server.xml文件，
+		修改默认端口即可；
+	5）启动成功后，在浏览器中访问：http://localhost:端口，如果能够正确打开网页，
+	表示服务器安装成功！
+
+http://192.168.51.1:8282/test1/demo1.html
+		
